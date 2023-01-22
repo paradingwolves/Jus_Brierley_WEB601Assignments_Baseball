@@ -13,19 +13,22 @@ export class ContentComponentComponent implements OnInit {
     id:1,
     title:"Most Errors on one play",
     description:"Gareth Allen Made 4 Errors on one play",
-    creator:"Justin"
+    creator:"Justin",
+    type:"Baseball Card"
   }
   contentItem2:Content = {
     id:2,
     title:"Joey Gallo strikes out against pitcher throwing literal beach balls",
-    description:"Gareth Allen Made 4 Errors on one play",
-    creator:"Justin"
+    description:"Joey Gallo and his incredible bat-to-ball skills were on full display tonight when Sister Jean struck him out on 3 straight pitches. Yes. She was throwing a beach ball.",
+    creator:"Justin",
+    type:"Baseball Card"
   }
   contentItem3:Content = {
     id:3,
-    title:"Most Errors on one play",
-    description:"Gareth Allen Made 4 Errors on one play",
-    creator:"Justin"
+    title:"Largest Earthquake Caused by a Leftfielder",
+    description:"Casey Carpenter (6'3, 320LBs) was pursuing a ball that was hit over his head. In his pursuit, he tripped and fell at full speed causing a magnitude 3 earthquake in the Riverside area. ",
+    creator:"Justin",
+    type:"Baseball Card"
   }
   myContent = new ContentList(this.contentItem)
   contentList = this.myContent.getContent();
