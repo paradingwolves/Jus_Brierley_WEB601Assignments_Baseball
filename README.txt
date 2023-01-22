@@ -15,48 +15,18 @@ DATE MODIFIED:          2023-01-15  @ 10:35PM - 10:30PM
 DATE MODIFIED:          2023-01-16  @ 5:35PM - 6:30PM
     - added new custom component to homepage of application
 
+DATE MODIFIED:          2023-01-20  @ 3:00PM - 5:00PM
+    - added 3 contentItems to my private array using the add() method i created
+    - cannot get items to display using my displayAtIndex() method, so for the time being I am using the 
+    *ngFor attribute to display all array items
+    - although the displayAtIndex() method fails to give me HTML output, it will disply an error message
+    when an invalid index is given (this will be a javascript alert)
+
+DATE MODIFIED:          2023-01-22  @ 10:45AM - 12:00PM
+    - time to fix my display error (wish me luck lol)
+    - moved my displayAtIndex method call from the constructor to the ngOnInit method and now the method
+    displays HTML content
 
 
 
-class MyContentList extends ContentList {
-    constructor() {
-        super();
-        // creating 3 valid content items
-        const item1: Content = {
-            id: 1,
-            title: 'First Item',
-            description: 'This is the first item',
-            creator: 'John Doe',
-            imgURL: 'https://example.com/image1.jpg',
-            type: 'Type A',
-            tags: ['tag1', 'tag2']
-        };
-        const item2: Content = {
-            id: 2,
-            title: 'Second Item',
-            description: 'This is the second item',
-            creator: 'Jane Doe',
-            imgURL: 'https://example.com/image2.jpg',
-            type: 'Type B',
-            tags: ['tag3', 'tag4']
-        };
-        const item3: Content = {
-            id: 3,
-            title: 'Third Item',
-            description: 'This is the third item',
-            creator: 'John Smith',
-            type: 'Type C',
-        };
-        // Adding the items to the content list using the add function
-        this.add(item1);
-        this.add(item2);
-        this.add(item3);
-    }
-}
 
-const myContentList = new MyContentList();
-console.log(myContentList.count());  // 3
-
-
-1. create template
-2. reference ToDo List
