@@ -1,4 +1,4 @@
-import { Content } from "./content-interface";
+/* import { Content } from "./content-interface";
 
 export class ContentList {
 
@@ -46,4 +46,4 @@ export class ContentList {
                 <img src="${item.imgURL}" alt="${item.title}">
                 <p>Type: ${item.type}</p>`;
     }
-}
+} */

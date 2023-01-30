@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
+/* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 
 
@@ -9,7 +9,7 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-component.component.scss']
 })
 export class ContentComponentComponent implements OnInit {
-  contentItem:Content = {
+  /* contentItem:Content = {
     id:1,
     title:"Most Errors on one play",
     description:"Gareth Allen Made 4 Errors on one play",
@@ -29,15 +29,12 @@ export class ContentComponentComponent implements OnInit {
     description:"Casey Carpenter (6'3, 320LBs) was pursuing a ball that was hit over his head. In his pursuit, he tripped and fell at full speed causing a magnitude 3 earthquake in the Riverside area. ",
     creator:"Justin",
     type:"Baseball Card"
-  }
-  myContent = new ContentList(this.contentItem)
-  contentList = this.myContent.getContent();
+  } */
+ 
   
   constructor() {
-    this.myContent.add(this.contentItem);
-    this.myContent.add(this.contentItem2);
-    this.myContent.add(this.contentItem3);
-   /*  console.log(this.myContent); */
+    
+  
     
     
     
@@ -46,14 +43,7 @@ export class ContentComponentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const x = document.getElementById('superSpecificSelector');
-    console.log(x);
-    if(x) {
-      x.innerHTML += this.myContent.displayAtIndex(0);
-      x.innerHTML += this.myContent.displayAtIndex(1);
-      x.innerHTML += this.myContent.displayAtIndex(2);
-      /* x.innerHTML += this.myContent.displayAtIndex(50); */ // remove comment to see error message
+   
     }
     
-  }
 } 
