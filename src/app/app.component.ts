@@ -72,4 +72,5 @@ export class AppComponent {
     this.contentArray.push(this.contentItem5);
     this.contentArray.push(this.contentItem6);
   }
+
 }

@@ -3,10 +3,11 @@
 <div class="test">
   <h4>{{ content.title }}</h4>
   <p>{{ content.description }}</p>
-  <img src="{{ content.imgURL }}" /><br>
+  <img class="image" src="{{ content.imgURL }}" (click)="imageText()"/><br>
   By:<em> {{ content.creator }}</em>
   <p>{{ content.tags }}</p>
 </div>
+
 
 
 

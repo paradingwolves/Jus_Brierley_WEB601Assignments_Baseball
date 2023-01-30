@@ -7,7 +7,6 @@ import { Content } from '../helper-files/content-interface';
   styleUrls: ['./content-list.component.scss']
 })
 export class ContentListComponent implements OnInit{
-
   @Input() content: Content;
   constructor() {
     this.content = {
@@ -19,16 +18,13 @@ export class ContentListComponent implements OnInit{
       type:"Meme",
       tags:["rick", "roll"]
     };
-  
-    
-    
-    
-    
-    
   }
 
   ngOnInit(): void {
   
 
+  }
+  imageText() {
+    console.log("image url: " + this.content.imgURL + "Image Title:" + this.content.title);
   }
 }
