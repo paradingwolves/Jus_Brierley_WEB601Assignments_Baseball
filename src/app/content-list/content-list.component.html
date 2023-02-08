@@ -1,12 +1,21 @@
 
 
-<div class="test">
-  <h4>{{ content.title }}</h4>
+
+<div class="{{ content.type }}">
+  <h2>{{ content.title }}</h2>
   <p>{{ content.description }}</p>
   <img class="image" src="{{ content.imgURL }}" (click)="imageText()"/><br>
   By:<em> {{ content.creator }}</em>
   <p>{{ content.tags }}</p>
+  <p>Type: {{ content.type }}</p>
 </div>
+ 
+
+  
+  
+
+ 
+
 
 
 

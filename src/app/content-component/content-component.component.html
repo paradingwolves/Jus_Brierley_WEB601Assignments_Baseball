@@ -1,16 +1,39 @@
-<!-- <div class="row">
-    <div class="card" *ngFor="let items of contentList;" style="max-width: 20rem;">
-        <div class="card-header">Baseball Blunders</div>
-        <div class="card-body">
-          <h4 class="card-title">{{ items.title }}</h4>
-          <p class="card-text">{{ items.description }}</p>
-          By:<em> {{ items.creator }}</em>
-        </div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 mt-5">
+      <input [(ngModel)]="searchTerm" placeholder="Enter title">
+      <button (click)="search()">Search</button>
+      <div *ngIf="message">
+        <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
       </div>
-</div> -->
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+
+  <div class="row">
+    <h2 class="m-5">Blunders</h2>
+    <content-list class="col-md-4  mt-5 mx-1 card bg-dark text-white" *ngFor="let item of contentArray | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-list>
+  </div>   
+  
+  <div class="row">
+    <h2 class="m-5">Achievements</h2>
+    <content-list class="col-md-4  mt-5 mx-1 card bg-white text-dark" *ngFor="let item of contentArray | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-list>
+  </div>   
+
+ 
+
+</div>
 
 
-<content-list *ngFor="let item of contentArray.slice(0, 5); index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-list>
+
+
+
+
 
 
 
