@@ -6,17 +6,23 @@ import { Content } from '../helper-files/content-interface';
 })
 export class ContentFilterPipe implements PipeTransform {
 
-  transform(contentArray: Content[], type?: string): Content[] {
+  transform(contentArray: Content[], type?: string) {
     if (!contentArray ){
       return contentArray;
+    } 
+    else {
+      return contentArray.filter((card)=> 
+      { 
+        return card.type?.toLowerCase() === type?.toLowerCase()
+      });
     }
-    const baseballCards = [];
+   /*  const baseballCards = [];
     for (const card of contentArray){
       if(card['type'] === type){
         baseballCards.push(card);
       }
     }
-    return baseballCards;
+    return baseballCards; */
   }
 
 }

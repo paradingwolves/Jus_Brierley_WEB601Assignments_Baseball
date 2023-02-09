@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 /* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 
@@ -106,13 +106,14 @@ export class ContentComponentComponent implements OnInit {
     this.contentArray.push(this.contentItem8);
   }
   search() {
-    const content = this.contentArray.find(c => c.title === this.searchTerm);
+    const content = this.contentArray.find(c => c.title.toLowerCase().substring(0,  this.searchTerm.length) === this.searchTerm.toLowerCase());
+    console.log(this.searchTerm);
     if (content) {
-      this.message = `Content with title "${this.searchTerm}" found.`;
+      this.message = `Content with title "${this.searchTerm.toLowerCase()}" found.`;
       this.messageColor = 'green';
       
     } else {
-      this.message = `Content with title "${this.searchTerm}" not found.`;
+      this.message = `Content with title "${this.searchTerm.toLowerCase()}" not found.`;
       this.messageColor = 'red';
     }
   }

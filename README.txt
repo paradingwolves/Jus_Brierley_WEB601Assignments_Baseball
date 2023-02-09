@@ -74,3 +74,4 @@ DATE MODIFIED:          2023-02-08  @ 11:00AM - 2:00PM
 - got pipe working
 - add search
 - add filter method
+- updated search method to include subtring()
