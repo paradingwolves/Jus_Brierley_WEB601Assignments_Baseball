@@ -12,6 +12,7 @@ export class HoverAffectDirective {
     this.originalFontWeight = this.el.nativeElement.style.fontWeight
   }
 
+  /* method to make tags bold and type underlined on hover */
   @HostListener('mouseenter') onMouseEnter() {
     this.hover(this.hoverStyle);
     this.el.nativeElement.style.textDecoration = 'underline';
@@ -25,12 +26,13 @@ export class HoverAffectDirective {
       });
     }
   }
-
+  /* method to revert items back to their default styles */
   @HostListener('mouseleave') onMouseLeave() {
     this.el.nativeElement.style.fontWeight = this.originalFontWeight;
     this.el.nativeElement.style.textDecoration = 'none';
     const tags = this.el.nativeElement[this.hoverStyle] as string[];
     if (tags) {
+      /* bold tags that are being hovered over */
       tags.forEach(tag => {
         const tagElement = this.el.nativeElement.querySelector(`.${tag}`);
         if (tagElement) {
