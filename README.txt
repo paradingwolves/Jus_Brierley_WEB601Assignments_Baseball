@@ -75,3 +75,14 @@ DATE MODIFIED:          2023-02-08  @ 11:00AM - 2:00PM
 - add search
 - add filter method
 - updated search method to include subtring()
+
+
+
+DATE MODIFIED:          2023-02-15  @ 11:00AM - 2:00PM
+
+- assignment 4 started
+- updated package.json version to 4
+- created the directive for content.imgURL
+- created attribute directive for the type
+- individual tags bold when hovered on, type underlines on hover
+- assignment 4 requirements done

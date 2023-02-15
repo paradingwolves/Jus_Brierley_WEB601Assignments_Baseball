@@ -31,7 +31,7 @@ export class ContentComponentComponent implements OnInit {
     title:"Most Errors in a Game by a Single Player",
     description:"The most errors by a player in a game is 9 by 2nd baseman Andy Leonard of the Boston Red Caps in 1876.",
     creator:"Jables",
-    imgURL:"https://upload.wikimedia.org/wikipedia/commons/c/c4/Andy_Leonard.jpg",
+   /*  imgURL:"https://upload.wikimedia.org/wikipedia/commons/c/c4/Andy_Leonard.jpg", */
     type:"Blunders",
     tags:["MLB", "Blunder", "Boston Red Caps","Record", "Boston", "Andy Leonard", "Errors", "Most Errors in a Game"]
   };
