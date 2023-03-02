@@ -5,24 +5,10 @@ import { Content } from '../helper-files/content-interface';
   name: 'contentFilter'
 })
 export class ContentFilterPipe implements PipeTransform {
-
-  transform(contentArray: Content[], type?: string) {
-    if (!contentArray ){
-      return contentArray;
-    } 
-    else {
-      return contentArray.filter((card)=> 
-      { 
-        return card.type?.toLowerCase() === type?.toLowerCase()
-      });
+  transform(contents: Content[], category: string): Content[] {
+    if (!category || category === 'All') {
+      return contents;
     }
-   /*  const baseballCards = [];
-    for (const card of contentArray){
-      if(card['type'] === type){
-        baseballCards.push(card);
-      }
-    }
-    return baseballCards; */
+    return contents.filter(content => content.type === category);
   }
-
 }

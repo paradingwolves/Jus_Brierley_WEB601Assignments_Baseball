@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 /* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
+import { ContentFilterPipe } from '../pipes/content-filter.pipe';
 
 
 
@@ -14,6 +15,7 @@ export class ContentListComponent implements OnInit {
   searchTerm: string = '';
   message: string = '';
   messageColor: string = '';
+  
 
 
 
@@ -116,6 +118,14 @@ export class ContentListComponent implements OnInit {
       this.message = `Content with title "${this.searchTerm.toLowerCase()}" not found.`;
       this.messageColor = 'red';
     }
+  }
+
+ 
+  
+  onContentCreated(content: Content) {
+    /* this.contentArray.push(content); */
+    this.contentArray = [...this.contentArray, content];
+    console.log("success", this.contentArray);
   }
   ngOnInit(): void {
    

@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <form class="row g-3" (submit)="onSubmit()">
+    <div class="col-md-6">
+      <label for="title" class="form-label">Title:</label>
+      <input type="text" id="title" [(ngModel)]="title" name="title" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="description" class="form-label">Description:</label>
+      <textarea id="description" [(ngModel)]="description" name="description" class="form-control"></textarea>
+    </div>
+    <div class="col-md-6">
+      <label for="creator" class="form-label">Creator:</label>
+      <input type="text" id="creator" [(ngModel)]="creator" name="creator" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="imgURL" class="form-label">Image URL:</label>
+      <input type="text" id="imgURL" [(ngModel)]="imgURL" name="imgURL" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="type" class="form-label">Type:</label>
+      <select id="type" [(ngModel)]="type" name="type" class="form-select">
+        <option value="Blunders">Blunders</option>
+        <option value="Achievement">Achievement</option>
+      </select>
+    </div>
+    
+    <div class="col-md-6">
+      <label for="tags" class="form-label">Tags:</label>
+      <input type="text" id="tags" [(ngModel)]="tags" name="tags" class="form-control">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-primary">Create Content</button>
+    </div>
+  </form>
+</div>
+<div *ngIf="errorMessage" [ngStyle]="{ color: errorMessageColor }">
+  {{ errorMessage }}
+</div>
