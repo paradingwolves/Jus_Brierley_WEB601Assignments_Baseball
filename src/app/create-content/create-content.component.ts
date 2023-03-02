@@ -21,13 +21,13 @@ export class CreateContentComponent {
 
   onSubmit(): Promise<Content> {
     return new Promise((resolve, reject) => {
-      if (!this.title || !this.description || !this.creator || !this.type) {
+      if (!this.id || !this.title || !this.description || !this.creator || !this.type) {
         this.errorMessage = 'Please fill out all required fields';
         reject(new Error(this.errorMessage));
       } else {
         this.errorMessage = '';
         const content: Content = {
-          id: this.id + 9,
+          id: this.id,
           title: this.title,
           description: this.description,
           creator: this.creator,
@@ -36,6 +36,7 @@ export class CreateContentComponent {
           tags: this.tags.split(',')
         };
         this.contentCreated.emit(content);
+        this.id = 0;
         this.title = '';
         this.description = '';
         this.creator = '';
@@ -43,6 +44,7 @@ export class CreateContentComponent {
         this.type = '';
         this.tags = '';
         console.log(content);
+        console.log(typeof this.id);
         resolve(content);
       }
     });
