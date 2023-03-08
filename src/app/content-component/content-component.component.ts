@@ -37,6 +37,9 @@ export class ContentComponentComponent implements OnInit{
   
 
   }
+
+  
+
   imageText() {
     console.log("image url: " + this.content.imgURL + "Image Title:" + this.content.title);
   }

@@ -9,10 +9,10 @@
 
 
 <div class="container">
-  <div class="row">
+<!--   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-8 mt-5">
-      <!-- Search Bar -->
+      Search Bar
       <input [(ngModel)]="searchTerm" placeholder="Enter title">
       <button (click)="search()">Search</button>
       <div *ngIf="message">
@@ -20,17 +20,17 @@
       </div>
     </div>
     <div class="col-md-2"></div>
-  </div>
+  </div> -->
 
   <!-- Blunders Content -->
   <div class="row">
     <h2 class="m-5">Blunders</h2>
-    <content-component class="col-md-4  mt-5 mx-1 card bg-dark text-white" *ngFor="let item of contentArray | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
+    <content-component class="col-md-4  mt-5 mx-1 card bg-dark text-white" *ngFor="let item of baseballCards | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
   </div>   
    <!-- Achievements Contents -->
   <div class="row">
     <h2 class="m-5">Achievements</h2>
-    <content-component class="col-md-4  mt-5 mx-1 card bg-white text-dark" *ngFor="let item of contentArray | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
+    <content-component class="col-md-4  mt-5 mx-1 card bg-white text-dark" *ngFor="let item of baseballCards | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
   </div>   
 
  
