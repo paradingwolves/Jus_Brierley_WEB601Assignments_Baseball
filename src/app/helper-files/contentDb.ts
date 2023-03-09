@@ -9,7 +9,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://media.wbur.org/wp/2019/09/Lead-photo-1000x700.jpg",
         type:"Blunders",
-        tags:["Tommy John", "Blunder", "Errors", "MLB"]
+        tags:["Tommy John", "Errors", "MLB"]
       },
       {
         id: 2,
@@ -18,7 +18,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://upload.wikimedia.org/wikipedia/commons/c/c4/Andy_Leonard.jpg",
         type:"Blunders",
-        tags:["MLB", "Blunder", "Boston Red Caps","Record", "Boston", "Andy Leonard", "Errors", "Most Errors in a Game"]
+        tags:["MLB", "Boston Red Caps","Record", "Boston", "Andy Leonard", "Errors", "Most Errors in a Game"]
       },
       {
         id: 3,
@@ -27,7 +27,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://img.mlbstatic.com/mlb-images/image/private/ar_16:9,g_auto,q_auto:good,w_1024,c_fill,f_jpg/mlb/po07nd34sro6cyqhscu3",
         type:"Achievement",
-        tags:["Achievement", "MLB", "Record", "Stolen Bases","Eddie Collins", "Carl Crawford", "Otis Nixon", "Eric Young", "Most Stolen Bases", "Single Game"]
+        tags:["Record", "Stolen Bases","Most Stolen Bases", "Single Game"]
       },
       {
         id: 4,
@@ -36,7 +36,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://pbs.twimg.com/media/CUxN9kxU8AAoW5c.jpg",
         type:"Achievement",
-        tags:["Achievement", "MLB", "Record","Homeruns","Barry Bonds", "Record", "Season"]
+        tags:["Record","Homeruns","Barry Bonds", "Record", "Season"]
     },
     {
         id: 5,
@@ -45,7 +45,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://thumb.spokesman.com/BZ1_2LyYFzhkPuRKKVEsBhK-dT8=/400x0/media.spokesman.com/photos/2004/09/30/spt_30ichiro_pic_09-30-2004_0V2MKQ2.jpg",
         type:"Achievement",
-        tags:["Achievement", "MLB", "Record","Hits","Ichiro", "Ichiro Suzuki", "Record", "Season"]
+        tags:["Hits","Ichiro", "Ichiro Suzuki", "Record", "Season"]
     },
     {
         id: 6,
@@ -54,7 +54,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://sabr.org/wp-content/uploads/2012/01/WeyhingGus.jpg",
         type:"Blunders",
-        tags:["Gus Weyhing", "Blunders", "Hit Batters", "Most hit batters", "MLB"]
+        tags:["Gus Weyhing", "Hit Batters", "Most hit batters"]
     },
     {
         id: 7,
@@ -63,7 +63,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://imageio.forbes.com/blogs-images/kurtbadenhausen/files/2014/09/0325_new-york-yankees-shortstop-derek-jeter-running_650x455.jpg?format=jpg&width=1200",
         type:"Blunders",
-        tags:["Derek Jeter", "Blunders", "Defense", "Worst Defender", "Overrated", "MLB"]
+        tags:["Derek Jeter", "Defense", "Worst Defender", "Overrated", "MLB"]
     },
     {
         id: 8,
@@ -72,7 +72,7 @@ export const baseballCards: Content[] = [
         creator:"Jables",
         imgURL:"https://a.espncdn.com/photo/2010/0419/la_g_gagne01_576.jpg",
         type:"Achievement",
-        tags:["Achievement", "MLB", "Record","Saves","Most Consecutive Saves", "Eric Gagne", "Record"]
+        tags:["MLB", "Record","Saves","Most Consecutive Saves", "Eric Gagne", "Record"]
     },
 ]
 

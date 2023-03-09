@@ -19,7 +19,7 @@ export class ContentComponentComponent implements OnInit{
       creator:"Jables",
       imgURL:"https://media.wbur.org/wp/2019/09/Lead-photo-1000x700.jpg",
       type:"Blunders",
-      tags:["Tommy John", "Blunder", "Errors", "MLB"]
+      tags:["Tommy John", "Errors", "MLB"]
     },
     {
         id: 2,
@@ -28,13 +28,14 @@ export class ContentComponentComponent implements OnInit{
         creator:"Jables",
         imgURL:"https://upload.wikimedia.org/wikipedia/commons/c/c4/Andy_Leonard.jpg",
         type:"Blunders",
-        tags:["MLB", "Blunder", "Boston Red Caps","Record", "Boston", "Andy Leonard", "Errors", "Most Errors in a Game"]
+        tags:["MLB", "Boston Red Caps","Record", "Boston", "Andy Leonard", "Errors", "Most Errors in a Game"]
     };
+    
   }
   
 
   ngOnInit(): void {
-  
+    
 
   }
 

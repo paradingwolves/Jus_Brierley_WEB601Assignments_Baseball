@@ -1,15 +1,5 @@
-
-
-
-
- 
-
-
-
-
-
-<div class="container">
-<!--   <div class="row">
+<div class="container-lg">
+  <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-8 mt-5">
       Search Bar
@@ -20,17 +10,17 @@
       </div>
     </div>
     <div class="col-md-2"></div>
-  </div> -->
+  </div>
 
   <!-- Blunders Content -->
   <div class="row">
     <h2 class="m-5">Blunders</h2>
-    <content-component class="col-md-4  mt-5 mx-1 card bg-dark text-white" *ngFor="let item of baseballCards | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
+    <content-component class="col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-5" *ngFor="let item of baseballCards | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
   </div>   
    <!-- Achievements Contents -->
   <div class="row">
     <h2 class="m-5">Achievements</h2>
-    <content-component class="col-md-4  mt-5 mx-1 card bg-white text-dark" *ngFor="let item of baseballCards | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
+    <content-component class="col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-5 " *ngFor="let item of baseballCards | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
   </div>   
 
  
