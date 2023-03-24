@@ -50,6 +50,10 @@ export class ContentListComponent implements OnInit {
     this.baseballService.getBaseballCards()
       .subscribe(cards => this.baseballCards = cards);
   }  
+  addContentToList(newContentItem: Content): void { 
+    this.baseballService.addContent(newContentItem).subscribe(newContentFromServer => this.baseballCards.push(newContentFromServer)
+    ); }
+  
 }
 
 

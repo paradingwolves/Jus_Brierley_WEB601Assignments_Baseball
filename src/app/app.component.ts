@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   constructor(private baseballService: BaseballService) {}
 
   ngOnInit() {
-    // Calling the getContentById method of the BaseballService to get the content of a baseball card with id 8
+    /* // Calling the getContentById method of the BaseballService to get the content of a baseball card with id 8
     this.baseballService.getContentById(8).subscribe(
       (card: Content | undefined) => {
         this.card = card; // Assigning the content to the card variable
@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
           this.card.type = "selectedCard"; // Changing the type of the card to "selectedCard" if the card exists
         }
       }
-    );
+    ); */
   }
 }
 
