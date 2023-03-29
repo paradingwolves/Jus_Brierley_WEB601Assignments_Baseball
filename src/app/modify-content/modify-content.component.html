@@ -1,0 +1,31 @@
+<form (ngSubmit)="addContentToList()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="title" [(ngModel)]="title" name="title" required>
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description<span class="text-danger">*</span></label>
+      <textarea class="form-control" id="description" [(ngModel)]="description" name="description" rows="3" required></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="creator" class="form-label">Creator<span class="text-danger">*</span></label>
+      <input type="text" class="form-control" id="creator" [(ngModel)]="creator" name="creator" required>
+    </div>
+    <div class="mb-3">
+      <label for="imgURL" class="form-label">Image URL</label>
+      <input type="text" class="form-control" id="imgURL" [(ngModel)]="imgURL" name="imgURL">
+    </div>
+    <div class="mb-3">
+      <label for="type" class="form-label">Type<span class="text-danger">*</span></label>
+      <select class="form-select" id="type" [(ngModel)]="type" name="type" required>
+        <option value="">Select a type</option>
+        <option value="Blunders">Blunder</option>
+        <option value="Achievement">Achievement</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="tags" class="form-label">Tags (comma-separated)</label>
+      <input type="text" class="form-control" id="tags" [(ngModel)]="tags" name="tags">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Content</button>
+</form>

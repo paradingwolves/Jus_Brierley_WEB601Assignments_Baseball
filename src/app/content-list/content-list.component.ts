@@ -41,18 +41,32 @@ export class ContentListComponent implements OnInit {
   }
 
   // Implement OnInit interface method to retrieve baseball cards data
-  ngOnInit(): void {
-    this.getBaseballCards();
+  ngOnInit() {
+    this.baseballService.getBaseballCards().subscribe(items => {
+      this.baseballCards = items;
+    });
   }
 
-  // Define getBaseballCards method to get baseball cards data from BaseballService
+ /*  // Define getBaseballCards method to get baseball cards data from BaseballService
   getBaseballCards(): void {
     this.baseballService.getBaseballCards()
       .subscribe(cards => this.baseballCards = cards);
   }  
   addContentToList(newContentItem: Content): void { 
-    this.baseballService.addContent(newContentItem).subscribe(newContentFromServer => this.baseballCards.push(newContentFromServer)
-    ); }
+    this.baseballService.addContent(newContentItem)
+    .subscribe(newContentFromServer => this.baseballCards
+      .push(newContentFromServer)
+    ); 
+    console.log(newContentItem)
+  }
+
+  updateContentInList(contentItem: Content): void {
+    this.baseballService.updateContent(contentItem)
+    .subscribe(() =>
+    console.log("Content updated successfully")
+    );
+  } */
+  
   
 }
 
