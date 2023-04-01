@@ -1,5 +1,25 @@
 <modify-content></modify-content>
 
+<div fxLayout="column" fxLayoutGap="12px">
+  <h3>Blunders</h3>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="12px">
+    <div fxFlex="calc(25% - 9px)" *ngFor="let item of baseballCards | contentFilter:'Blunders'">
+      <content-component class="" [content]="item"></content-component>
+    </div>
+  </div>
+
+  <h3>Achievements</h3>
+  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="12px">
+    <div fxFlex="calc(25% - 9px)" *ngFor="let item of baseballCards | contentFilter:'Achievement'">
+      <content-component class="" [content]="item"></content-component>
+    </div>
+  </div>
+</div>
+
+
+
+
+
       <div *ngIf="message">
         <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
       </div>
@@ -7,13 +27,11 @@
 
   <!-- Blunders Content -->
   <div class="">
-    <h2 class="">Blunders</h2>
-    <content-component class="" *ngFor="let item of baseballCards | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
+    
   </div>   
    <!-- Achievements Contents -->
   <div class="">
-    <h2 class="">Achievements</h2>
-    <content-component class="" *ngFor="let item of baseballCards | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
+    
   </div>   
 
 

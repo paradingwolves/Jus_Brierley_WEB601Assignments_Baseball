@@ -12,18 +12,18 @@
   </div>
 </div> -->
 
-<div class="{{ content.type }}">
-  <img [src]="content.imgURL" class="" alt="{{ content.title }}">
-  <div class="">
-    <h5 class="" appHoverAffect="tags">{{ content.title }}</h5>
-    <p class="">{{ content.description }}</p>
-    <p class="">By: <em>{{ content.creator }}</em></p>
-    <ul class="">
+<mat-card [ngClass]="content.type" class="content-card">
+  <img [src]="content.imgURL" class="mat-card-image" alt="{{ content.title }}">
+  <mat-card-content>
+    <h5 class="mat-card-title" appHoverAffect="tags">{{ content.title }}</h5>
+    <p class="mat-card-subtitle">{{ content.description }}</p>
+    <p class="mat-card-subtitle">By: <em>{{ content.creator }}</em></p>
+    <ul class="mat-card-subtitle">
       <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="{{ tag }}">{{ tag }}</li>
     </ul>
-    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="">Type: {{ content.type }}</p>
-  </div>
-</div>
+    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="mat-card-subtitle">Type: {{ content.type }}</p>
+  </mat-card-content>
+</mat-card>
 
 
 

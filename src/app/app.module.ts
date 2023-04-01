@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { ContentComponentComponent } from './content-component/content-component.component';
 import { ContentListComponent } from './content-list/content-list.component';
@@ -19,6 +18,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select'; 
 import { MatPseudoCheckboxModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,9 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatPseudoCheckboxModule
+    MatPseudoCheckboxModule,
+    MatCardModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
