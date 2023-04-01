@@ -1,5 +1,5 @@
 
-<div class="card {{ content.type }} my-3">
+<!-- <div class="card {{ content.type }} my-3">
   <img [src]="content.imgURL" class="card-img-top" alt="{{ content.title }}">
   <div class="card-body">
     <h5 class="card-title" appHoverAffect="tags">{{ content.title }}</h5>
@@ -10,7 +10,22 @@
     </ul>
     <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="card-text">Type: {{ content.type }}</p>
   </div>
+</div> -->
+
+<div class="{{ content.type }}">
+  <img [src]="content.imgURL" class="" alt="{{ content.title }}">
+  <div class="">
+    <h5 class="" appHoverAffect="tags">{{ content.title }}</h5>
+    <p class="">{{ content.description }}</p>
+    <p class="">By: <em>{{ content.creator }}</em></p>
+    <ul class="">
+      <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="{{ tag }}">{{ tag }}</li>
+    </ul>
+    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="">Type: {{ content.type }}</p>
+  </div>
 </div>
+
+
 
 <!-- Directive to show default image if no image is provided -->
 <ng-template #defaultImage>

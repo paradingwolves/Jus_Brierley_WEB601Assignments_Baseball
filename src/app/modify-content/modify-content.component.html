@@ -1,4 +1,4 @@
-<form (ngSubmit)="addContentToList()">
+<!-- <form (ngSubmit)="addContentToList()">
     <div class="mb-3">
       <label for="title" class="form-label">Title<span class="text-danger">*</span></label>
       <input type="text" class="form-control" id="title" [(ngModel)]="title" name="title" required>
@@ -28,4 +28,77 @@
       <input type="text" class="form-control" id="tags" [(ngModel)]="tags" name="tags">
     </div>
     <button type="submit" class="btn btn-primary">Add Content</button>
+</form> -->
+<!-- 
+<form (ngSubmit)="addContentToList()">
+  <div class="">
+    <label for="title" class="">Title<span class="">*</span></label>
+    <input type="text" class="" id="title" [(ngModel)]="title" name="title" required>
+  </div>
+  <div class="">
+    <label for="description" class="">Description<span class="">*</span></label>
+    <textarea class="" id="description" [(ngModel)]="description" name="description" rows="3" required></textarea>
+  </div>
+  <div class="">
+    <label for="creator" class="">Creator<span class="">*</span></label>
+    <input type="text" class="" id="creator" [(ngModel)]="creator" name="creator" required>
+  </div>
+  <div class="">
+    <label for="imgURL" class="">Image URL</label>
+    <input type="text" class="" id="imgURL" [(ngModel)]="imgURL" name="imgURL">
+  </div>
+  <div class="mb-3">
+    <label for="type" class="">Type<span class="">*</span></label>
+    <select class="" id="type" [(ngModel)]="type" name="type" required>
+      <option value="">Select a type</option>
+      <option value="Blunders">Blunder</option>
+      <option value="Achievement">Achievement</option>
+    </select>
+  </div>
+  <div class="">
+    <label for="tags" class="">Tags (comma-separated)</label>
+    <input type="text" class="" id="tags" [(ngModel)]="tags" name="tags">
+  </div>
+  <button type="submit" class="">Add Content</button>
 </form>
+ -->
+
+
+<form (ngSubmit)="addContentToList()">
+  <mat-form-field appearance="fill">
+    <mat-label>Card Title</mat-label>
+    <input matInput id="title" name="title" [(ngModel)]="title" required />
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label for="description">Description</mat-label>
+    <textarea matInput id="description" name="description" [(ngModel)]="description" rows="3" required></textarea>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Creator</mat-label>
+    <input matInput id="creator" name="creator" [(ngModel)]="creator" required />
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Image URL</mat-label>
+    <input matInput id="imgURL" name="imgURL" [(ngModel)]="imgURL" required />
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Select a Type</mat-label>
+    <mat-select id="type" name="type" [(ngModel)]="type" required>
+      <mat-option value="">Select a Type</mat-option>
+      <mat-option value="Blunders">Blunder</mat-option>
+      <mat-option value="Achievement">Achievement</mat-option>
+    </mat-select>
+  </mat-form-field>
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Tags</mat-label>
+    <input matInput id="tags" name="tags" [(ngModel)]="tags" required />
+  </mat-form-field>
+  
+  <button mat-raised-button color="primary" type="submit">Add Card</button>
+</form>
+
