@@ -20,6 +20,8 @@ import {MatSelectModule} from '@angular/material/select';
 import { MatPseudoCheckboxModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MyDialogComponent } from './my-dialog/my-dialog.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HoverAffectDirective,
     AppMessagesComponent,
     ModifyContentComponent,
+    MyDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSelectModule,
     MatPseudoCheckboxModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

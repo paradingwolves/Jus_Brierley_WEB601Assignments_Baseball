@@ -1,0 +1,44 @@
+<h2 mat-dialog-title>Dialog Title</h2>
+    <mat-dialog-content>
+      <form class="card-form">
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label class="label">Card Title</mat-label>
+          <input matInput id="title" name="title" [(ngModel)]="title" required />
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label for="description" class="label">Description</mat-label>
+          <textarea matInput id="description" name="description" [(ngModel)]="description" rows="3" required></textarea>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label class="label">Creator</mat-label>
+          <input matInput id="creator" name="creator" [(ngModel)]="creator" required />
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label class="label">Image URL</mat-label>
+          <input matInput id="imgURL" name="imgURL" [(ngModel)]="imgURL" required />
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label class="label">Select a Type</mat-label>
+          <mat-select id="type" name="type" [(ngModel)]="type" required>
+            <mat-option value="">Select a Type</mat-option>
+            <mat-option value="Blunders">Blunder</mat-option>
+            <mat-option value="Achievement">Achievement</mat-option>
+          </mat-select>
+        </mat-form-field>
+      
+        <mat-form-field appearance="fill" class="form-field">
+          <mat-label class="label">Tags</mat-label>
+          <input matInput id="tags" name="tags" [(ngModel)]="tags" required />
+        </mat-form-field>
+        <mat-dialog-actions>
+          <button mat-raised-button color="warn" (click)="onCancelClick()">Cancel</button>
+          <button mat-raised-button color="primary"  (click)="onSubmitClick()">Submit</button>
+        </mat-dialog-actions>
+
+      </form>
+      
+    </mat-dialog-content>

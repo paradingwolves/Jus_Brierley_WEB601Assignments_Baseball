@@ -28,7 +28,7 @@ export class BaseballService {
 
   addContent(newContentItem: Content): Observable<Content> {
     this.messageService.add('New Content has been added with: ' + newContentItem.title);
-    console.log(newContentItem);
+    console.log("service", newContentItem);
     return this.http.post<Content>("api/content", newContentItem, this.httpOptions);
   }
 

@@ -2,6 +2,8 @@ import { Component, OnInit  } from '@angular/core';
 import { ContentListComponent } from '../content-list/content-list.component';
 import { Content } from '../helper-files/content-interface';
 import { BaseballService } from '../services/baseball-service.service';
+import { MyDialogComponent } from '../my-dialog/my-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'modify-content',
@@ -17,7 +19,7 @@ export class ModifyContentComponent implements OnInit {
   type: string = '';
   tags: string = '';
 
-  constructor(private baseballService: BaseballService, private contentComponent: ContentListComponent) { }
+  constructor(private baseballService: BaseballService, private contentComponent: ContentListComponent, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.baseballService.getBaseballCards().subscribe(contentItemsFromServer => {
@@ -50,5 +52,10 @@ export class ModifyContentComponent implements OnInit {
       this.type = '';
       this.tags = '';
     });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(MyDialogComponent);
+
   }
 }
