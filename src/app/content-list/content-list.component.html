@@ -2,27 +2,20 @@
 
 <div fxLayout="column" fxLayoutGap="12px">
   <h3>Blunders</h3>
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="12px">
-    <div fxFlex="calc(25% - 9px)" *ngFor="let item of baseballCards | contentFilter:'Blunders'">
+  <mat-grid-list cols="4" rowHeight="750px" gutterSize="12px">
+    <mat-grid-tile *ngFor="let item of baseballCards | contentFilter:'Blunders'">
       <content-component class="" [content]="item"></content-component>
-    </div>
-  </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 
   <h3>Achievements</h3>
-  <div fxLayout="row wrap" fxLayoutAlign="center center" fxLayoutGap="12px">
-    <div fxFlex="calc(25% - 9px)" *ngFor="let item of baseballCards | contentFilter:'Achievement'">
+  <mat-grid-list cols="4" rowHeight="750px" gutterSize="12px">
+    <mat-grid-tile *ngFor="let item of baseballCards | contentFilter:'Achievement'">
       <content-component class="" [content]="item"></content-component>
-    </div>
-  </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 </div>
 
-
-
-
-
-      <div *ngIf="message">
-        <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
-      </div>
 
 
   <!-- Blunders Content -->

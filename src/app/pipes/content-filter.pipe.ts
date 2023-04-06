@@ -7,22 +7,18 @@ import { Content } from '../helper-files/content-interface';
 export class ContentFilterPipe implements PipeTransform {
 
   transform(contentArray: Content[], type?: string) {
+    // Check if the contentArray argument is null or undefined
     if (!contentArray ){
       return contentArray;
     } 
     else {
+      // Use the filter method of array to filter out only the cards of matching type
       return contentArray.filter((card)=> 
       { 
         return card.type?.toLowerCase() === type?.toLowerCase()
       });
     }
-   /*  const baseballCards = [];
-    for (const card of contentArray){
-      if(card['type'] === type){
-        baseballCards.push(card);
-      }
-    }
-    return baseballCards; */
+
   }
 
 }

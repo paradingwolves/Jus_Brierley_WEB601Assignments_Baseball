@@ -3,14 +3,15 @@
 }
  */
 img {
-    width: 100%
+    width: 100%;
+    max-height: 250px;
 }
 
 
 .Blunders, .Achievement {
     background-color: white;
     padding: 15px;
-    height: 750px;
+    height: auto;
     margin-top: 2.5%;
     color: black
 }

@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { MyDialogComponent } from './my-dialog/my-dialog.component';
     MatPseudoCheckboxModule,
     MatCardModule,
     FlexLayoutModule,
-    MatDialogModule
+    MatDialogModule,
+    MatGridListModule
 
   ],
   providers: [],

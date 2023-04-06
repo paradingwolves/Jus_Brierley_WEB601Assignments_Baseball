@@ -2,7 +2,8 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 /* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 import { BaseballService } from '../services/baseball-service.service';
-
+import { ChangeDetectorRef } from '@angular/core';
+import { ApplicationRef } from '@angular/core';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class ContentListComponent implements OnInit {
   baseballCards: Content[] = [];
   
   // Inject BaseballService into the component's constructor
-  constructor(private baseballService: BaseballService){ }
+  constructor(private baseballService: BaseballService, private cdRef: ChangeDetectorRef){ }
 
   // Define search method to search for content based on user input
   search() {
@@ -42,32 +43,25 @@ export class ContentListComponent implements OnInit {
 
   // Implement OnInit interface method to retrieve baseball cards data
   ngOnInit() {
-    this.baseballService.getBaseballCards().subscribe(items => {
+    this.getBaseballCards();
+  }
+
+  getBaseballCards() {
+    this.baseballService.getBaseballCards().subscribe((items) => {
       this.baseballCards = items;
     });
   }
 
- /*  // Define getBaseballCards method to get baseball cards data from BaseballService
-  getBaseballCards(): void {
-    this.baseballService.getBaseballCards()
-      .subscribe(cards => this.baseballCards = cards);
-  }  
-  addContentToList(newContentItem: Content): void { 
-    this.baseballService.addContent(newContentItem)
-    .subscribe(newContentFromServer => this.baseballCards
-      .push(newContentFromServer)
-    ); 
-    console.log(newContentItem)
-  }
 
-  updateContentInList(contentItem: Content): void {
-    this.baseballService.updateContent(contentItem)
-    .subscribe(() =>
-    console.log("Content updated successfully")
-    );
-  } */
-  
-  
+  onContentAdded(newContentItem: Content) {
+    this.baseballService.addContent(newContentItem).subscribe((newContentFromServer) => {
+      console.log('addContentToList()', newContentFromServer);
+      // add the new content item to the baseballCards array
+      this.baseballCards.push(newContentFromServer);
+      // call change detection to update the view
+      this.cdRef.detectChanges();
+    });
+  }
 }
 
 
