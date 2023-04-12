@@ -48,8 +48,9 @@ export class MyDialogComponent {
 
     this.baseballService.addContent(newContentItem).subscribe(newContentFromServer => { // calls addContent() function from service
       console.log("addContentToList()", newContentFromServer); // logs new content item from server
-      this.cdRef.detectChanges(); // detects changes made to the content and updates the view
+      
       this.dialogRef.close(); // closes the dialog
+      this.cdRef.detectChanges(); // detects changes made to the content and updates the view
     });
   }
 }

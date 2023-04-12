@@ -23,6 +23,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MyDialogComponent } from './my-dialog/my-dialog.component';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCardModule,
     FlexLayoutModule,
     MatDialogModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule
 
   ],
   providers: [],

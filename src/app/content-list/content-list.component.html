@@ -1,6 +1,16 @@
 <modify-content></modify-content>
 
 <div fxLayout="column" fxLayoutGap="12px">
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <mat-form-field>
+      <input matInput [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search">
+    </mat-form-field>
+    <button mat-icon-button (click)="search()" aria-label="Search">
+      <mat-icon>search</mat-icon>
+    </button>
+  </div>
+  <div *ngIf="message" [style.color]="messageColor">{{ message }}</div>
+  
   <h3>Blunders</h3>
   <mat-grid-list cols="4" rowHeight="750px" gutterSize="12px">
     <mat-grid-tile *ngFor="let item of baseballCards | contentFilter:'Blunders'">
@@ -18,43 +28,9 @@
 
 
 
-  <!-- Blunders Content -->
-  <div class="">
-    
-  </div>   
-   <!-- Achievements Contents -->
-  <div class="">
-    
-  </div>   
 
 
 
-
-<!-- <div class="container-lg">
-  <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-8 mt-5">
-      Search Bar
-      <input [(ngModel)]="searchTerm" placeholder="Enter title">
-      <button (click)="search()">Search</button>
-      <div *ngIf="message">
-        <p [ngStyle]="{ color: messageColor }">{{ message }}</p>
-      </div>
-    </div>
-    <div class="col-md-2"></div>
-  </div>
-
-  Blunders Content
-  <div class="row">
-    <h2 class="m-5">Blunders</h2>
-    <content-component class="col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-5" *ngFor="let item of baseballCards | contentFilter:'Blunders'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst"></content-component>
-  </div>   
-   Achievements Contents
-  <div class="row">
-    <h2 class="m-5">Achievements</h2>
-    <content-component class="col-sm-12 col-md-4 col-lg-4 col-xl-3 mt-5 " *ngFor="let item of baseballCards | contentFilter:'Achievement'; index as i; first as isFirst" [content]="item" [class.is-first]="isFirst" ></content-component>
-  </div>   
-</div> -->
 
 
 
