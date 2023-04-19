@@ -1,0 +1,19 @@
+<div class="content-item-container">
+  <div *ngIf="contentItem" class="content-container" [ngClass]="(contentItem.type)">
+    <img [src]="contentItem.imgURL" alt="{{ contentItem.title }}" class="content-image">
+
+    <div class="content-details">
+
+      <h5 class="content-title" appHoverAffect="tags">{{ contentItem.title }}</h5>
+      
+      <p class="content-description">{{ contentItem.description }}</p>
+      
+      <p class="content-creator">By: <em>{{ contentItem.creator }}</em></p>
+      
+      <ul class="content-tags">
+        <li *ngFor="let tag of contentItem.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="content-item-tag">{{ tag }}</li>
+      </ul>
+      
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 /* import { ContentList } from '../helper-files/content-list'; */
 import { Content } from '../helper-files/content-interface';
 import { BaseballService } from '../services/baseball-service.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 
@@ -21,7 +22,11 @@ export class ContentListComponent implements OnInit {
   baseballCards: Content[] = [];
   
   // Inject BaseballService into the component's constructor
-  constructor(private baseballService: BaseballService){ }
+  constructor(private baseballService: BaseballService, private route: ActivatedRoute) {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+    })
+  }
 
   // Define search method to search for content based on user input
   search() {
@@ -47,26 +52,7 @@ export class ContentListComponent implements OnInit {
     });
   }
 
- /*  // Define getBaseballCards method to get baseball cards data from BaseballService
-  getBaseballCards(): void {
-    this.baseballService.getBaseballCards()
-      .subscribe(cards => this.baseballCards = cards);
-  }  
-  addContentToList(newContentItem: Content): void { 
-    this.baseballService.addContent(newContentItem)
-    .subscribe(newContentFromServer => this.baseballCards
-      .push(newContentFromServer)
-    ); 
-    console.log(newContentItem)
-  }
 
-  updateContentInList(contentItem: Content): void {
-    this.baseballService.updateContent(contentItem)
-    .subscribe(() =>
-    console.log("Content updated successfully")
-    );
-  } */
-  
   
 }
 

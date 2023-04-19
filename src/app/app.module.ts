@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { RouterModule, Routes } from "@angular/router";
+import { RouterOutlet } from "@angular/router";
 
 import { AppComponent } from './app.component';
 import { ContentComponentComponent } from './content-component/content-component.component';
@@ -19,6 +22,24 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatOptionModule } from '@angular/material/core';
 import {MatSelectModule} from '@angular/material/select'; 
 import { MatPseudoCheckboxModule } from '@angular/material/core';
+import { MatCardModule } from '@angular/material/card';
+import { ContentDetailComponent } from './content-detail/content-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import { ContentIdGuard } from './content-id-card';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'content', pathMatch: 'full' },
+  { path: 'content', component: ContentListComponent },
+  {
+    path: 'content/:id',
+    component: ContentDetailComponent,
+    canActivate: [ContentIdGuard]
+  },
+  { path: 'page-not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'page-not-found' }
+];
+
 
 @NgModule({
   declarations: [
@@ -29,6 +50,8 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
     HoverAffectDirective,
     AppMessagesComponent,
     ModifyContentComponent,
+    ContentDetailComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +68,12 @@ import { MatPseudoCheckboxModule } from '@angular/material/core';
     MatFormFieldModule,
     MatOptionModule,
     MatSelectModule,
-    MatPseudoCheckboxModule
+    MatPseudoCheckboxModule,
+    AppRoutingModule,
+    MatCardModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [ContentIdGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,6 +16,10 @@ export class BaseballService {
     this.messageService.add('Content array loaded!');
     return this.http.get<Content[]>("api/content");
   }
+  getBaseballCard(id: string | null): Observable<Content> {
+    const url = `api/content/${id}`;
+    return this.http.get<Content>(url);
+  }
 
   private httpOptions = {
     headers: new HttpHeaders(

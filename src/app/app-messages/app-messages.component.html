@@ -1,7 +1,7 @@
 <div *ngIf="messageService.messages.length" class="d-flex justify-content-center align-items-center mt-5">
-    <div class="card p-3">
-      <h2>Messages</h2>
-      <button type="button" class="btn btn-danger" (click)="messageService.clear()">Clear messages</button>
-      <div class="mt-3" *ngFor="let message of messageService.messages">{{message}}</div>
-    </div>
-  </div>
+  <mat-card class="message-card">
+    <h2 class="message-title">Messages</h2>
+    <button mat-raised-button color="warn" (click)="messageService.clear()" class="message-clear-button">Clear messages</button>
+    <div class="mt-3" *ngFor="let message of messageService.messages" class="message-text">{{ message }}</div>
+  </mat-card>
+</div>

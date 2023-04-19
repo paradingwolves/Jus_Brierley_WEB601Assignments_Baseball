@@ -1,29 +1,20 @@
 
-<!-- <div class="card {{ content.type }} my-3">
-  <img [src]="content.imgURL" class="card-img-top" alt="{{ content.title }}">
-  <div class="card-body">
-    <h5 class="card-title" appHoverAffect="tags">{{ content.title }}</h5>
-    <p class="card-text">{{ content.description }}</p>
-    <p class="card-text">By: <em>{{ content.creator }}</em></p>
-    <ul class="list-unstyled">
-      <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="{{ tag }}">{{ tag }}</li>
-    </ul>
-    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="card-text">Type: {{ content.type }}</p>
-  </div>
-</div> -->
 
-<div class="{{ content.type }}">
-  <img [src]="content.imgURL" class="" alt="{{ content.title }}">
-  <div class="">
-    <h5 class="" appHoverAffect="tags">{{ content.title }}</h5>
-    <p class="">{{ content.description }}</p>
-    <p class="">By: <em>{{ content.creator }}</em></p>
-    <ul class="">
-      <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="{{ tag }}">{{ tag }}</li>
+
+<div class="content-card mat-elevation-z2" [ngClass]="content.type">
+  <img [src]="content.imgURL" alt="{{ content.title }}">
+  <div class="content-details">
+    <h5 class="content-title" appHoverAffect="tags">{{ content.title }}</h5>
+    <p class="content-description">{{ content.description }}</p>
+    <a [routerLink]="['/content',content.id]" routerLinkActive="active">More Details</a>
+    <p class="content-creator">By: <em>{{ content.creator }}</em></p>
+    <ul class="content-tags">
+      <li *ngFor="let tag of content.tags" [appHoverAffect]="{fontWeight: 'bold'}" class="content-tag">{{ tag }}</li>
     </ul>
-    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="">Type: {{ content.type }}</p>
+    <p appHoverAffect style="cursor: pointer;" *ngIf="content.type !== 'selectedCard'" class="content-type">Type: {{ content.type }}</p>
   </div>
 </div>
+
 
 
 
